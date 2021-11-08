@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
   ];
 
   String result = "";
-  double input = 0.0, curRate = 0.0, val = 0.0 ;
+  double input = 0.0, val = 0.0 ;
   
   TextEditingController textEditingController = TextEditingController();
 
