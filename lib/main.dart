@@ -211,12 +211,12 @@ Future<void> _convert() async {
     var url = Uri.parse(
         'https://freecurrencyapi.net/api/v2/latest?apikey=$apikey&base_currency=$selectFcur');
     http.Response res = await http.get(url);
-    if (res.statusCode == 200) //if successfully request
+    if (res.statusCode == 200) 
     {
       var jsonData = res.body;
       var parsedJson = json.decode(jsonData);
       val = parsedJson['data'][selectTcur];
-      //curconverter = Converter(value, toCurrency);
+      
       setState(() {
         input = double.parse(textEditingController.text);
         result = (input * parsedJson['data'][selectTcur]).toStringAsFixed(2);
